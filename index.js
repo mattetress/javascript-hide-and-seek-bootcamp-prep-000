@@ -17,9 +17,11 @@ function increaseRankBy(n) {
 }
 
 function deepestChild() {
-  let deepItem = document.getElementById('grand-node');
-  let current = '';
-  let next = '';
-  
-  
+  let current = document.getElementById('grand-node')
+  let next = current.children[0]
+
+  while (next) {
+    current = next
+    next = current.children[0]
+  }
 }
